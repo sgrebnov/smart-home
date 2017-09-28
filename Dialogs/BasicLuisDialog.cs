@@ -20,19 +20,19 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("None")]
         public async Task NoneIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"111You have reached the none intent. You said: {result.Query}"); //
+            await context.PostAsync($"You have reached the none intent. You said: {result.Query}"); //
             context.Wait(MessageReceived);
         }
 
         [LuisIntent("HomeAutomation.TurnOn")]
-        public async Task MyIntent(IDialogContext context, LuisResult result)
+        public async Task TurnOnIntent(IDialogContext context, LuisResult result)
         {
             await context.PostAsync($"You have reached the TurnOn intent. You said: {result.Query}"); //
             context.Wait(MessageReceived);
         }
         
         [LuisIntent("HomeAutomation.TurnOff")]
-        public async Task MyIntent(IDialogContext context, LuisResult result)
+        public async Task TurnOffIntent(IDialogContext context, LuisResult result)
         {
             await context.PostAsync($"You have reached the TurnOff intent. You said: {result.Query}"); //
             context.Wait(MessageReceived);
