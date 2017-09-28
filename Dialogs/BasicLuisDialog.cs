@@ -27,14 +27,16 @@ namespace Microsoft.Bot.Sample.LuisBot
         [LuisIntent("HomeAutomation.TurnOn")]
         public async Task TurnOnIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"You have reached the TurnOn intent. You said: {result.Query}"); //
+            await context.PostAsync($"Sure, turning the light on"); 
+            // TODO: perform action
             context.Wait(MessageReceived);
         }
         
         [LuisIntent("HomeAutomation.TurnOff")]
         public async Task TurnOffIntent(IDialogContext context, LuisResult result)
         {
-            await context.PostAsync($"You have reached the TurnOff intent. You said: {result.Query}"); //
+            await context.PostAsync($"Got it, turning the light off");
+            // TODO: perform action
             context.Wait(MessageReceived);
         }
     }
